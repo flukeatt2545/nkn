@@ -1,0 +1,147 @@
+<head>
+    <style>
+    body {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 26px; 
+      margin: 10px 50px; 
+      letter-spacing: 2px; 
+      font-family: 'Itim', cursive;
+      font-weight: bold;
+      background-image: url("./image/w2.png");
+      line-height: normal;
+    }
+     img{
+      width: 200px;
+      height: auto;
+      border-radius: 50%;
+      border: solid 3px #15d7f1ee;
+    
+  }
+  button[type=button] {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input {
+    writing-mode: horizontal-tb !important;
+    font-size: 15px;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 4px 0px;
+    border-width: 0px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(243, 0, 0), rgb(255, 2, 2));
+    border-image: initial;
+}
+
+  </style>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+</head>
+<body>
+  ขณะนี้เวลา
+  <div id="clock"></div>
+  
+        <center>
+        <div class="logo">
+            <img src="./image/nkn1.png" alt="catcatChat">
+        </div>
+  <div class="header-msg">
+</div>
+  <div id="typedtext"></div>
+  <br>
+  <form>
+    <label for="username">ชื่อผู้ใช้:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <label for="password">รหัสผ่าน:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+    <button type="button" onclick="login()">ยืนยัน</button>
+  </form>
+            <html>
+              <body>
+                <!DOCTYPE html>
+                <html>
+                  <p>
+                    😭
+                  </p>
+                <body>
+                  <audio controls autoplay>
+                    <source src="./sound/hit4.mp3" type="audio/mpeg">
+                    บราวเซอร์ของคุณไม่รับการเล่นเพลง!
+                  </audio>
+
+        
+              </body>
+              <div>
+                <script>
+                  var users = [
+                    {username: "admin", password: "password123"},
+                    {username: "user1", password: "123456"},
+                    {username: "user2", password: "abcdef"}
+                  ];
+              
+                  function login() {
+                      var username = document.getElementById("username").value;
+                      var password = document.getElementById("password").value;
+                      var isValidUser = false;
+                      for (var i = 0; i < users.length; i++) {
+                        if (users[i].username == username && users[i].password == password) {
+                          isValidUser = true;
+                          break;
+                        }
+                      }
+                      if (isValidUser) {
+                        alert("เข้าสู่ระบบสำเร็จ");
+                        // ลิ้งค์ไปยังหน้าเว็บไซต์ที่ต้องการหลังจากล็อกอินเสร็จสมบูรณ์
+                        window.location.href = "header.html";
+                      } else {
+                        alert("ผู้ใช้หรือรหัสผ่านไม่ถูกต้อง");
+                        // ลิ้งค์ไปยังหน้าล็อกอินอีกครั้งหากชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง
+                        window.location.href = "index.html";
+                      }
+                    }
+                  
+                  function displayTime() {
+                      var date = new Date();
+                      var hours = date.getHours();
+                      var minutes = date.getMinutes();
+                      var seconds = date.getSeconds();
+                    
+                      // เพิ่มคำหน้าเวลาถ้าน้อยกว่า 10
+                      hours = (hours < 10) ? "0" + hours : hours;
+                      minutes = (minutes < 10) ? "0" + minutes : minutes;
+                      seconds = (seconds < 10) ? "0" + seconds : seconds;
+                    
+                      // แสดงผลเวลาบนหน้าเว็บ
+                      var clock = document.getElementById("clock");
+                      clock.innerText = hours + ":" + minutes + ":" + seconds;
+                    }
+                    
+                    // อัปเดตเวลาทุกๆ 1 วินาที
+                    setInterval(displayTime, 1000);
+                  
+                    
+                </script>
+
+                <link rel="stylesheet" type="text/css" href="style2.css">
+                
+                </body>
+                </html>

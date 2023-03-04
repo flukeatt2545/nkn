@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./web/style_ข้อมูล.css?v=1002">
+    <link rel="stylesheet" href="./web/ข้อมูล.css?v=1002">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าหลัก</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+	background-color: #ffffff;
+
+}
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header{
+    border-bottom: 1px solid #fff6f6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ff0000;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #ff0000;
+}
+
+.nav-link:hover{
+    color: #f72f2f;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #f73c2f;
+}
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #ffffff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(255, 255, 255, 0.075);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .clock {
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+        padding: 35px;
+      }
+    }
+    img{
+     width: 200px;
+     height: auto;
+     border-radius: 50%;
+     justify-content: center;
+    
+ }
+ body {
+
+    font-size: 25px; 
+    margin: 10px 50px; 
+    letter-spacing: 2px; 
+    font-weight: bold;
+    color: rgb(235, 0, 0);
+    line-height: normal;
+  }
+div {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Itim', cursive;
+}
+h2 {
+    font-family: 'Itim', cursive;
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+</style>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="header.html" class="nav-logo">F T K</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="ข้อมูล.html" class="nav-link">เกี่ยวกับเพื่อนๆ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">ยังไม่เปิด</a>
+                </li>
+                <li class="nav-item">
+                    <a href="G2.html" class="nav-link">web developer</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        
+        </html>
+</header>
+<head>
+    <title></title>
+  </head>
+  <body>
+    <br>
+    <p>นาฬิกาของคนรักกัน
+        แต่เขาไม่รักมึงหรอก
+    </p>
+    <div id="clock"></div>
+    <br>
+    <div class="logo">
+        <img src="./image/nkn.png" alt="catcatChat">
+    </div>
+  </body>
+  <head>
+    
+    <link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<style>
+		#output {
+			font-size: 30px;
+		}
+	</style>
+	<script>
+		var text = "ยินดีต้อนรับ สู่หน้าเว็บกากๆ";
+		var i = 0;
+		function printNextChar() {
+			document.getElementById("output").innerHTML += text.charAt(i);
+			i++;
+			if (i < text.length) {
+				setTimeout(printNextChar, 100);
+			}
+        }
+	</script>
+</head>
+<body onload="printNextChar();">
+	<div id="output"></div>
+</body>
+<button id="toggle-theme">สลับโหมด</button>
+<!DOCTYPE html>
+<html>
+    <button id="btn-logout">ออกจากระบบ</button>
+
+
+
+
+</html>
+
+</html>
+<body>
+
+<script>
+    const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+function displayTime() {
+    var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+  
+    // เพิ่มคำหน้าเวลาถ้าน้อยกว่า 10
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+  
+    // แสดงผลเวลาบนหน้าเว็บ
+    var clock = document.getElementById("clock");
+    clock.innerText = hours + ":" + minutes + ":" + seconds;
+  }
+  
+  // อัปเดตเวลาทุกๆ 1 วินาที
+  setInterval(displayTime, 1000);
+
+</script>
+<body>
+    <body>
+								
+        
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <style>
+        /* สไตล์สำหรับโหมดกลางวัน */
+        body.light {
+            background-image: url("./image/กลางวัน.jpg");
+          color: #000000;
+        }
+        header {
+          background-color: #000000;
+        }
+        /* สไตล์สำหรับโหมดกลางคืน */
+        body.dark {
+            background-image: url("./image/กลางคืน.jpg");
+          color: #ffffff;
+        }
+        
+
+        /* ปุ่มสำหรับสลับโหมด */
+        button#toggle-theme {
+          
+          color: #000000;
+          border: none;
+          padding: 8px 16px;
+          border-radius: 4px;
+          cursor: pointer;
+          margin-bottom: 16px;
+        }
+      </style>
+    </head>
+    <body class="light">
+      <header>
+
+      </header>
+    
+      <script>
+        const toggleButton = document.getElementById('toggle-theme');
+        const body = document.body;
+      
+        toggleButton.addEventListener('click', function() {
+          body.classList.toggle('light');
+          body.classList.toggle('dark');
+        });
+        function logout() {
+            // ลบ Session หรือ Cookie ที่ใช้เก็บข้อมูลผู้ใช้งาน
+            // โดยอาจใช้ localStorage หรือ sessionStorage หรือ Cookie ตามต้องการ
+            // ตัวอย่างเช่น
+            localStorage.removeItem('user');
+          
+            // ส่งคำร้องขอออกจากระบบไปยังหน้าเข้าสู่ระบบหรือหน้าหลักของเว็บไซต์
+            window.location.href = "index.html";
+          }
+          
+          document.getElementById("btn-logout").addEventListener("click", logout);
+          
+      </script>
+    </body>
+    </html>
+                  
+    
+</li>
+</body>
+</body>
+</html>
